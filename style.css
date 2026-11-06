@@ -1,59 +1,213 @@
+﻿body {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
 .cluster-container {
     position: relative;
-    width: 100%;
-    max-width: 1280px;
-    background: #0b0b0b;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 1280px;
+    height: 480px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.cluster-header {
+    height: 50px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.m-badge {
+    background: linear-gradient(135deg, #0066cc, #002b5c, #ff3300);
+    color: white;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.model-text {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.cluster-screen {
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+
+.dial {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+    border: 1px solid #222;
+}
+
+.dial-content {
+    text-align: center;
+}
+
+.speed-value {
+    font-size: 48px;
+    font-weight: bold;
+    color: #00d2ff;
+}
+
+.speed-unit {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.gear-label {
+    display: block;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.gear-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffaa00;
+}
+
+.central-viewport {
+    flex: 1;
+    position: relative;
+    background: #000;
     overflow: hidden;
 }
 
-.camera-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.adas-view {
     width: 100%;
     height: 100%;
-    z-index: 5;
-    background: rgba(0, 0, 0, 0.85);
+    position: relative;
+    background: linear-gradient(to bottom, #050b14, #001e3d);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.camera-overlay.hidden {
-    display: none;
+.ego-vehicle {
+    width: 40px;
+    height: 80px;
+    background: #00d2ff;
+    border-radius: 6px;
+    box-shadow: 0 0 15px #00d2ff;
 }
 
-#cameraFeed {
+.lane-lines {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 40px,
+        rgba(255, 255, 255, 0.3) 40px,
+        rgba(255, 255, 255, 0.3) 60px
+    );
 }
 
-.m-play-btn {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
-    color: #fff;
-    border: 1px solid rgba(0, 210, 255, 0.4);
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    cursor: pointer;
+.camera-stream-view {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #000;
+}
+
+.simulated-feed {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #051923, #003554);
+    position: relative;
+    overflow: hidden;
+}
+
+.camera-overlay-text {
+    color: #00ffcc;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.crosshairs {
+    width: 60px;
+    height: 60px;
+    border: 2px dashed rgba(0, 255, 204, 0.6);
+    border-radius: 50%;
+    position: relative;
+}
+
+.cluster-footer {
+    height: 40px;
+    background: #111;
     display: flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 210, 255, 0.2);
+    justify-content: space-between;
+    padding: 0 30px;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #333;
+}
+
+.control-panel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.demo-btn {
+    background: linear-gradient(135deg, #007acc, #005999);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 122, 204, 0.4);
     transition: all 0.3s ease;
 }
 
-.m-play-btn:hover {
-    border-color: #00d2ff;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 210, 255, 0.4);
-    transform: translateX(-50%) translateY(-2px);
+.demo-btn:hover {
+    background: linear-gradient(135deg, #0098ff, #007acc);
+    box-shadow: 0 6px 20px rgba(0, 152, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.demo-btn.active {
+    background: linear-gradient(135deg, #cc0000, #990000);
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.4);
 }
