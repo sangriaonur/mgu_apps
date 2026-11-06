@@ -72,16 +72,16 @@
     background: transparent;
 }
 
-/* Perfectly embed central viewport inside the MGU screen area using percentages */
+/* Precisely aligned angular MGU screen map/camera window */
 .central-viewport {
     position: absolute;
-    top: 9%;
-    left: 20.5%;
-    width: 59%;
-    height: 80%;
+    top: 11%;
+    left: 21.5%;
+    width: 57%;
+    height: 77%;
     background: transparent;
     overflow: hidden;
-    clip-path: polygon(6% 3%, 50% 7%, 94% 3%, 97% 18%, 93% 95%, 50% 98%, 7% 95%, 3% 18%);
+    clip-path: polygon(8% 2%, 50% 6%, 92% 2%, 96% 20%, 94% 94%, 50% 97%, 6% 94%, 4% 20%);
 }
 
 .adas-view {
