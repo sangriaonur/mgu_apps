@@ -1,0 +1,181 @@
+body {
+    background-color: #0b0d12;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.cluster-container {
+    width: 900px;
+    background: #12151b;
+    border: 3px solid #2a2f3a;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+}
+
+.cluster-header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.m-badge {
+    color: #0066b2;
+    margin-right: 4px;
+}
+
+.cluster-screen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+    height: 350px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #1f242d;
+}
+
+/* Dials Styling */
+.dial {
+    width: 280px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #1a1f2c 0%, #080a0f 70%);
+}
+
+.left-dial {
+    border-right: 2px solid #ff4500;
+}
+
+.right-dial {
+    border-left: 2px solid #ff4500;
+}
+
+.dial-content {
+    text-align: center;
+}
+
+.speed-value {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.speed-unit, .gear-label {
+    font-size: 14px;
+    color: #8b92a0;
+    text-transform: uppercase;
+}
+
+.gear-value {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+/* Central Viewport (Map / ADAS / Camera Frame) */
+.central-viewport {
+    flex-grow: 1;
+    height: 100%;
+    position: relative;
+    background: #05070a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adas-view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #111622, #05070a);
+}
+
+.ego-vehicle {
+    width: 40px;
+    height: 70px;
+    background: #e0e6ed;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+/* Simulated Front Camera Feed View */
+.camera-stream-view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #111;
+}
+
+.simulated-feed {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #223322 0%, #050a05 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-overlay-text {
+    position: absolute;
+    top: 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #00ff66;
+    background: rgba(0,0,0,0.6);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #00ff66;
+}
+
+.crosshairs {
+    width: 60px;
+    height: 60px;
+    border: 2px dashed rgba(0, 255, 102, 0.4);
+    border-radius: 50%;
+}
+
+/* Footer */
+.cluster-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0 20px;
+    font-size: 14px;
+    color: #9aa0a6;
+}
+
+/* Demo Button */
+.control-panel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.demo-btn {
+    background-color: #0066b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.demo-btn:hover {
+    background-color: #004b87;
+}

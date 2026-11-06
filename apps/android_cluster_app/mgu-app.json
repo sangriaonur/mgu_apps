@@ -1,0 +1,8 @@
+{
+  "name": "android_cluster_app",
+  "version": "1.0.0",
+  "displayName": "Android Auto on Cluster",
+  "entryPoint": {
+    "file": "src/android_app.js"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "camera_cluster_app",
+  "version": "1.0.0",
+  "displayName": "Camera on Cluster",
+  "entryPoint": {
+    "file": "src/camera_app.js"
+  }
+}
