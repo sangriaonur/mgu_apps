@@ -72,16 +72,16 @@
     background: transparent;
 }
 
-/* Central Viewport with exact M-Cluster Shield/Polygon Cutout matching the display window */
+/* Perfectly embed central viewport inside the MGU screen area using percentages */
 .central-viewport {
     position: absolute;
-    top: 15px;
-    bottom: 15px;
-    left: 260px;
-    right: 260px;
+    top: 9%;
+    left: 20.5%;
+    width: 59%;
+    height: 80%;
     background: transparent;
     overflow: hidden;
-    clip-path: polygon(12% 5%, 50% 10%, 88% 5%, 95% 22%, 92% 90%, 50% 95%, 8% 90%, 5% 22%);
+    clip-path: polygon(6% 3%, 50% 7%, 94% 3%, 97% 18%, 93% 95%, 50% 98%, 7% 95%, 3% 18%);
 }
 
 .adas-view {
@@ -90,7 +90,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(5, 11, 22, 0.85);
+    background: rgba(5, 11, 22, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
