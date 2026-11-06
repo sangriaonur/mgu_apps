@@ -15,53 +15,65 @@
     position: relative;
     width: 1280px;
     height: 480px;
-    background: #111;
-    border: 2px solid #333;
-    border-radius: 12px;
+    background: #0d0d0f;
+    border: 2px solid #222;
+    border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9), inset 0 0 20px rgba(255,255,255,0.03);
 }
 
 .cluster-header {
-    height: 50px;
-    background: #1a1a1a;
+    height: 45px;
+    background: #141416;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    gap: 10px;
-    border-bottom: 1px solid #333;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid #26262a;
 }
 
 .m-badge {
-    background: linear-gradient(135deg, #0066cc, #002b5c, #ff3300);
+    position: absolute;
+    left: 25px;
+    background: linear-gradient(135deg, #0066cc, #1a365d, #e53e3e);
     color: white;
-    font-weight: bold;
-    padding: 4px 10px;
+    font-weight: 800;
+    padding: 3px 10px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
 .model-text {
     font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: #e2e8f0;
+    text-transform: uppercase;
 }
 
 .cluster-screen {
     flex: 1;
     display: flex;
     position: relative;
+    background: #050507;
 }
 
 .dial {
-    width: 280px;
+    width: 260px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
-    border: 1px solid #222;
+    background: radial-gradient(circle at center, #16161a 0%, #08080a 100%);
+    border-right: 1px solid #1f1f23;
+    border-left: 1px solid #1f1f23;
+}
+
+.right-dial {
+    border-left: 1px solid #1f1f23;
+    border-right: none;
 }
 
 .dial-content {
@@ -69,53 +81,61 @@
 }
 
 .speed-value {
-    font-size: 48px;
-    font-weight: bold;
-    color: #00d2ff;
+    font-size: 52px;
+    font-weight: 700;
+    color: #38bdf8;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
 
 .speed-unit {
     display: block;
-    font-size: 14px;
-    color: #888;
+    font-size: 13px;
+    color: #94a3b8;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .gear-label {
     display: block;
-    font-size: 12px;
-    color: #aaa;
+    font-size: 11px;
+    color: #94a3b8;
+    letter-spacing: 1px;
 }
 
 .gear-value {
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffaa00;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fbbf24;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
 }
 
+/* Central Viewport with exact M-Cluster Shield/Polygon Cutout matching your sketch */
 .central-viewport {
     flex: 1;
     position: relative;
     background: #000;
     overflow: hidden;
+    clip-path: polygon(10% 3%, 50% 8%, 90% 3%, 97% 20%, 95% 92%, 50% 97%, 5% 92%, 3% 20%);
+    margin: 8px 12px;
+    border-radius: 8px;
 }
 
 .adas-view {
     width: 100%;
     height: 100%;
     position: relative;
-    background: linear-gradient(to bottom, #050b14, #001e3d);
+    background: linear-gradient(180deg, #091325 0%, #02060d 100%);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .ego-vehicle {
-    width: 40px;
-    height: 80px;
-    background: #00d2ff;
-    border-radius: 6px;
-    box-shadow: 0 0 15px #00d2ff;
+    width: 45px;
+    height: 90px;
+    background: #38bdf8;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #38bdf8;
 }
 
 .lane-lines {
@@ -125,9 +145,9 @@
     background: repeating-linear-gradient(
         to bottom,
         transparent,
-        transparent 40px,
-        rgba(255, 255, 255, 0.3) 40px,
-        rgba(255, 255, 255, 0.3) 60px
+        transparent 35px,
+        rgba(255, 255, 255, 0.35) 35px,
+        rgba(255, 255, 255, 0.35) 55px
     );
 }
 
@@ -146,68 +166,69 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #051923, #003554);
+    background: linear-gradient(135deg, #02233b, #01111e);
     position: relative;
     overflow: hidden;
 }
 
 .camera-overlay-text {
-    color: #00ffcc;
+    color: #2dd4bf;
     font-family: monospace;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    text-shadow: 0 0 12px rgba(45, 212, 191, 0.6);
 }
 
 .crosshairs {
-    width: 60px;
-    height: 60px;
-    border: 2px dashed rgba(0, 255, 204, 0.6);
+    width: 70px;
+    height: 70px;
+    border: 2px dashed rgba(45, 212, 191, 0.7);
     border-radius: 50%;
     position: relative;
 }
 
 .cluster-footer {
-    height: 40px;
-    background: #111;
+    height: 38px;
+    background: #141416;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
-    font-size: 14px;
-    color: #aaa;
-    border-top: 1px solid #333;
+    padding: 0 35px;
+    font-size: 13px;
+    color: #94a3b8;
+    border-top: 1px solid #26262a;
+    font-weight: 500;
 }
 
 .control-panel {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 25px;
     width: 100%;
 }
 
 .demo-btn {
-    background: linear-gradient(135deg, #007acc, #005999);
+    background: linear-gradient(135deg, #0284c7, #0369a1);
     color: white;
     border: none;
-    padding: 14px 28px;
-    font-size: 16px;
+    padding: 14px 32px;
+    font-size: 15px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 122, 204, 0.4);
+    box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4);
     transition: all 0.3s ease;
 }
 
 .demo-btn:hover {
-    background: linear-gradient(135deg, #0098ff, #007acc);
-    box-shadow: 0 6px 20px rgba(0, 152, 255, 0.6);
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    box-shadow: 0 6px 25px rgba(14, 165, 233, 0.6);
     transform: translateY(-2px);
 }
 
 .demo-btn.active {
-    background: linear-gradient(135deg, #cc0000, #990000);
-    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.4);
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
 }
