@@ -1,0 +1,59 @@
+.cluster-container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    background: #0b0b0b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.camera-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-overlay.hidden {
+    display: none;
+}
+
+#cameraFeed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.m-play-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+    color: #fff;
+    border: 1px solid rgba(0, 210, 255, 0.4);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 210, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.m-play-btn:hover {
+    border-color: #00d2ff;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 210, 255, 0.4);
+    transform: translateX(-50%) translateY(-2px);
+}

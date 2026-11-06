@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW ID7 Live Cockpit - Front Camera Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cluster-container">
+        <!-- Top Branding / M Badge -->
+        <div class="cluster-header">
+            <span class="m-badge">M</span><span class="model-text">M440i</span>
+        </div>
+
+        <!-- Main Instrument Cluster Display Area -->
+        <div class="cluster-screen">
+            <!-- Left Dial (Speedometer) -->
+            <div class="dial left-dial">
+                <div class="dial-content">
+                    <span class="speed-value">55</span>
+                    <span class="speed-unit">mph</span>
+                </div>
+            </div>
+
+            <!-- Central Multi-Information Display (MID) - Camera / Map Frame -->
+            <div class="central-viewport" id="centralViewport">
+                <!-- Default state: Driving Assistant / Lane Visualization -->
+                <div class="adas-view" id="adasView">
+                    <div class="ego-vehicle"></div>
+                    <div class="lane-lines"></div>
+                </div>
+                <!-- Camera stream simulation (hidden by default) -->
+                <div class="camera-stream-view" id="cameraView">
+                    <div class="simulated-feed">
+                        <div class="camera-overlay-text">LIVE FRONT CAMERA FEED</div>
+                        <div class="crosshairs"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Dial (Power / Tachometer) -->
+            <div class="dial right-dial">
+                <div class="dial-content">
+                    <span class="gear-label">COMFORT</span>
+                    <span class="gear-value">D</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Status Bar -->
+        <div class="cluster-footer">
+            <span class="range">🚗 284 mi</span>
+            <span class="time">1:11 am</span>
+            <span class="temp">+77 °F</span>
+        </div>
+    </div>
+
+    <!-- Demo Control Panel -->
+    <div class="control-panel">
+        <button id="toggleDemoBtn" class="demo-btn">Toggle Front Camera Demo</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
