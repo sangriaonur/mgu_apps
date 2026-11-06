@@ -59,12 +59,11 @@
     flex: 1;
     display: flex;
     position: relative;
-    background-image: url('cluster-bg.jpg');
+    background-image: url('cluster-bg.png');
     background-size: cover;
     background-position: center;
 }
 
-/* Transparent overlays so your real background photo shows through the dials */
 .dial {
     width: 260px;
     display: flex;
