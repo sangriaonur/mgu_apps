@@ -21,17 +21,18 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.9), inset 0 0 20px rgba(255,255,255,0.03);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9);
 }
 
 .cluster-header {
     height: 45px;
-    background: #141416;
+    background: rgba(20, 20, 22, 0.95);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     border-bottom: 1px solid #26262a;
+    z-index: 10;
 }
 
 .m-badge {
@@ -58,97 +59,37 @@
     flex: 1;
     display: flex;
     position: relative;
-    background: #050507;
+    background-image: url('cluster-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
+/* Transparent overlays so your real background photo shows through the dials */
 .dial {
     width: 260px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, #16161a 0%, #08080a 100%);
-    border-right: 1px solid #1f1f23;
-    border-left: 1px solid #1f1f23;
+    background: rgba(8, 8, 10, 0.4);
 }
 
-.right-dial {
-    border-left: 1px solid #1f1f23;
-    border-right: none;
-}
-
-.dial-content {
-    text-align: center;
-}
-
-.speed-value {
-    font-size: 52px;
-    font-weight: 700;
-    color: #38bdf8;
-    text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-}
-
-.speed-unit {
-    display: block;
-    font-size: 13px;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.gear-label {
-    display: block;
-    font-size: 11px;
-    color: #94a3b8;
-    letter-spacing: 1px;
-}
-
-.gear-value {
-    font-size: 40px;
-    font-weight: 700;
-    color: #fbbf24;
-    text-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
-}
-
-/* Central Viewport with exact M-Cluster Shield/Polygon Cutout matching your sketch */
 .central-viewport {
     flex: 1;
     position: relative;
-    background: #000;
+    background: transparent;
     overflow: hidden;
     clip-path: polygon(10% 3%, 50% 8%, 90% 3%, 97% 20%, 95% 92%, 50% 97%, 5% 92%, 3% 20%);
     margin: 8px 12px;
-    border-radius: 8px;
 }
 
 .adas-view {
     width: 100%;
     height: 100%;
     position: relative;
-    background: linear-gradient(180deg, #091325 0%, #02060d 100%);
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.ego-vehicle {
-    width: 45px;
-    height: 90px;
-    background: #38bdf8;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #38bdf8;
-}
-
-.lane-lines {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        to bottom,
-        transparent,
-        transparent 35px,
-        rgba(255, 255, 255, 0.35) 35px,
-        rgba(255, 255, 255, 0.35) 55px
-    );
 }
 
 .camera-stream-view {
@@ -191,7 +132,7 @@
 
 .cluster-footer {
     height: 38px;
-    background: #141416;
+    background: rgba(20, 20, 22, 0.95);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -200,6 +141,7 @@
     color: #94a3b8;
     border-top: 1px solid #26262a;
     font-weight: 500;
+    z-index: 10;
 }
 
 .control-panel {
