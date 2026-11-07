@@ -111,8 +111,10 @@
     top: 0;
     left: 0;
     background-image: url('camera-feed.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
 }
 
 .simulated-feed {
@@ -125,7 +127,6 @@
     padding-bottom: 25px;
     position: relative;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
 }
 
 .camera-overlay-text {
