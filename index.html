@@ -16,14 +16,10 @@
             <div class="dial left-dial"></div>
             <div class="central-viewport">
                 <!-- ADAS View -->
-                <div class="adas-view" id="adasView">
-                    <div class="ego-vehicle"></div>
-                </div>
+                <div class="adas-view" id="adasView"></div>
                 <!-- Camera Stream View -->
                 <div class="camera-stream-view" id="cameraView">
-                    <div class="simulated-feed">
-                        <div class="camera-overlay-text">FRONT CAMERA FEED</div>
-                    </div>
+                    <div class="simulated-feed"></div>
                 </div>
             </div>
             <div class="dial right-dial"></div>
@@ -47,7 +43,7 @@
             
             if (camera.style.display === 'block') {
                 camera.style.display = 'none';
-                adas.style.display = 'flex';
+                adas.style.display = 'block';
                 btn.textContent = 'Toggle Front Camera Demo';
                 btn.classList.remove('active');
             } else {
