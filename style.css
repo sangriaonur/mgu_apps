@@ -1,4 +1,4 @@
-body {
+﻿body {
     background-color: #0b0b0b;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -72,6 +72,7 @@ body {
     background: transparent;
 }
 
+/* Identical polygon mask and bounds for both ADAS and Camera view */
 .central-viewport {
     position: absolute;
     top: 15%;
@@ -110,11 +111,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url\('camera-feed.png'\);
-    background-size: contain;
+    background-image: url('camera-feed.png');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #000;
 }
 
 .simulated-feed {
