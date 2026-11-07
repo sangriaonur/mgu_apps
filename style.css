@@ -88,7 +88,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('adas-feed.png');
+    background-image: url('HideMyCamera.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -102,7 +102,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('camera-feed.png');
+    background-image: url('FrontCamera.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
