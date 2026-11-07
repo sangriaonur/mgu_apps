@@ -72,7 +72,6 @@
     background: transparent;
 }
 
-/* Precisely aligned angular MGU screen map/camera window (Corrected Offsets) */
 .central-viewport {
     position: absolute;
     top: 14.5%;
@@ -81,7 +80,6 @@
     height: 73%;
     background: transparent;
     overflow: hidden;
-    clip-path: polygon(7% 3%, 50% 6%, 93% 3%, 96% 18%, 94% 93%, 50% 97%, 6% 93%, 4% 18%);
 }
 
 .adas-view {
@@ -94,6 +92,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    clip-path: polygon(7% 3%, 50% 6%, 93% 3%, 96% 18%, 94% 93%, 50% 97%, 6% 93%, 4% 18%);
 }
 
 .ego-vehicle {
@@ -115,7 +114,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #000;
+    background-color: transparent;
 }
 
 .simulated-feed {
