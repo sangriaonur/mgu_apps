@@ -3,64 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMW Live Cluster Pro - Front Camera Visualizer</title>
+    <title>BMW MGU Live Cluster Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="cluster-container">
-        <!-- Top Branding / M Badge -->
         <div class="cluster-header">
-            <span class="m-badge">M</span><span class="model-text">Live Cluster Pro</span>
+            <div class="m-badge">M</div>
+            <div class="model-text">Live Cluster Pro</div>
         </div>
-
-        <!-- Main Instrument Cluster Display Area -->
         <div class="cluster-screen">
-            <!-- Left Dial (Speedometer) -->
-            <div class="dial left-dial">
-                <div class="dial-content">
-                    <span class="speed-value">55</span>
-                    <span class="speed-unit">km/h</span>
-                </div>
-            </div>
-
-            <!-- Central Multi-Information Display (MID) with M-Cluster Shield Cutout -->
-            <div class="central-viewport" id="centralViewport">
-                <!-- Default state: Driving Assistant / Lane Visualization -->
+            <div class="dial left-dial"></div>
+            <div class="central-viewport">
+                <!-- ADAS View -->
                 <div class="adas-view" id="adasView">
                     <div class="ego-vehicle"></div>
-                    <div class="lane-lines"></div>
                 </div>
-                <!-- Camera stream simulation (hidden by default) -->
+                <!-- Camera Stream View -->
                 <div class="camera-stream-view" id="cameraView">
                     <div class="simulated-feed">
-                        <div class="camera-overlay-text">LIVE FRONT CAMERA FEED</div>
-                        <div class="crosshairs"></div>
+                        <div class="camera-overlay-text">FRONT CAMERA FEED</div>
                     </div>
                 </div>
             </div>
-
-            <!-- Right Dial (Tachometer) -->
-            <div class="dial right-dial">
-                <div class="dial-content">
-                    <span class="gear-label">COMFORT</span>
-                    <span class="gear-value">D</span>
-                </div>
-            </div>
+            <div class="dial right-dial"></div>
         </div>
-
-        <!-- Bottom Status Bar -->
         <div class="cluster-footer">
-            <span class="range">⛽ 699 km</span>
+            <span class="range">🔋 699 km</span>
             <span class="time">12:08</span>
             <span class="temp">+21.0 °C</span>
         </div>
     </div>
 
-    <!-- Demo Control Panel -->
     <div class="control-panel">
-        <button id="toggleDemoBtn" class="demo-btn">Toggle Front Camera Demo</button>
+        <button class="demo-btn" id="toggleBtn" onclick="toggleView()">Toggle Front Camera Demo</button>
     </div>
 
-    <script src="app.js"></script>
+    <script>
+        function toggleView() {
+            const adas = document.getElementById('adasView');
+            const camera = document.getElementById('cameraView');
+            const btn = document.getElementById('toggleBtn');
+            
+            if (camera.style.display === 'block') {
+                camera.style.display = 'none';
+                adas.style.display = 'flex';
+                btn.textContent = 'Toggle Front Camera Demo';
+                btn.classList.remove('active');
+            } else {
+                camera.style.display = 'block';
+                adas.style.display = 'none';
+                btn.textContent = 'Hide Front Camera Feed';
+                btn.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
