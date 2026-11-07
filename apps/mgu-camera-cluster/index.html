@@ -2,18 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MGU Front Camera Cluster</title>
+    <title>Front Camera Cluster App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cluster-container">
-        <div class="cluster-screen">
-            <!-- Live video stream container for the vehicle's hardware camera feed -->
-            <div class="central-viewport">
-                <video id="clusterCameraFeed" autoplay playsinline muted style="width: 100%; height: 100%; object-fit: cover;"></video>
-            </div>
-        </div>
+    <div class="cluster-viewport">
+        <!-- Live hardware stream injection target for cluster-render -->
+        <video id="clusterCameraFeed" autoplay playsinline muted></video>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>

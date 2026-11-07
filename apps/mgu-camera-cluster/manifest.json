@@ -1,0 +1,7 @@
+﻿{
+  "name": "Front Camera Stream",
+  "id": "mgu-camera-cluster",
+  "version": "1.0.0",
+  "description": "Live front camera feed integration for BMW iDrive 7 MGU instrument cluster",
+  "entry": "index.html"
+}
